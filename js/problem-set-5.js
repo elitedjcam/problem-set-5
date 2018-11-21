@@ -192,10 +192,20 @@ function hurricane() {
 
   let stormPower;
   windspeed = prompt("Please enter a valid wind speed.");
-  if (windspeed < 39) {
-    windspeed = prompt("This is an invalid wind speed.")
-  } else if (windspeed >= 39 && windspeed <= 73) {
+   if (windspeed >= 39 && windspeed <= 73) {
     stormPower = "Tropical Storm"
+  } else if (windspeed >= 74 && windspeed <= 95) {
+    stormPower = "Category 1 Hurricane"
+  } else if (windspeed >= 96 && windspeed <= 110) {
+    stormPower = "Category 2 Hurricane"
+  } else if (windspeed >= 111 && windspeed <= 129) {
+    stormPower = "Category 3 Hurricane"
+  } else if (windspeed >= 130 && windspeed <= 156) {
+    stormPower = "Category 4 Hurricane"
+  } else if (windspeed >= 157) {
+    stormPower = "Category 5 Hurricane"
+  } else {
+    stormPower = "invalid"
   }
 
   var div = document.getElementById("hurricane")
