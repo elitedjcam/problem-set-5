@@ -154,7 +154,7 @@ function credit() {
 
 function guess() {
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+  Math.
 
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
@@ -243,15 +243,33 @@ function gymnastics() {
   let scores = []; // DO NOT MODIFY
   /////////////////// DO NOT MODIFY
 
-  let score1 = prompt("Enter the first score.")
-  let score2 = prompt("Enter the first score.")
-  let score3 = prompt("Enter the first score.")
-  let score4 = prompt("Enter the first score.")
-  let score5 = prompt("Enter the first score.")
-  let score6 = prompt("Enter the first score.")
 
-  var div = document.getElementById("")
-  div.innerHTML =
+  let score1 = prompt("Enter the first score.")
+  let score2 = prompt("Enter the second score.")
+  let score3 = prompt("Enter the third score.")
+  let score4 = prompt("Enter the fourth score.")
+  let score5 = prompt("Enter the fifth score.")
+  let score6 = prompt("Enter the sixth score.")
+
+  score1 = Number(score1);
+  score2 = Number(score2);
+  score3 = Number(score3);
+  score4 = Number(score4);
+  score5 = Number(score5);
+  score6 = Number(score6);
+
+
+
+  scores = [score1, score2, score3, score4, score5, score6]
+  scores.sort(function(a, b){return a - b});
+
+  total = scores[1] + scores[2] + scores[3] + scores[4]
+  console.log(scores)
+  average = (total / 4)
+  average.toFixed(2);
+
+  var div = document.getElementById("gymnastics-output")
+  div.innerHTML = "Discarded: " + scores[0] + ", " + scores[5] + "<br/> Score: " + average
 
   /*
    * NOTE: The 'total' variable should be representative of the sum of all
