@@ -26,6 +26,7 @@ function mario() {
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
 
+  height = prompt("Please choose a height between 1 and 23.")
 
 
   ////////////////////////// DO NOT MODIFY
@@ -114,7 +115,7 @@ function credit() {
   let card; // DO NOT MODIFY
   //////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
+  let cardNumber = prompt("Enter a credit card number.")
 
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
@@ -192,24 +193,25 @@ function hurricane() {
 
   let stormPower;
   windspeed = prompt("Please enter a valid wind speed.");
-   if (windspeed >= 39 && windspeed <= 73) {
-    stormPower = "Tropical Storm"
+  if (windspeed < 39){
+    stormPower = "The skies are calm..."
+  } else if (windspeed >= 39 && windspeed <= 73) {
+    stormPower = "Tropical Storm."
   } else if (windspeed >= 74 && windspeed <= 95) {
-    stormPower = "Category 1 Hurricane"
+    stormPower = "Category 1 Hurricane."
   } else if (windspeed >= 96 && windspeed <= 110) {
-    stormPower = "Category 2 Hurricane"
+    stormPower = "Category 2 Hurricane."
   } else if (windspeed >= 111 && windspeed <= 129) {
-    stormPower = "Category 3 Hurricane"
+    stormPower = "Category 3 Hurricane."
   } else if (windspeed >= 130 && windspeed <= 156) {
-    stormPower = "Category 4 Hurricane"
+    stormPower = "Category 4 Hurricane."
   } else if (windspeed >= 157) {
-    stormPower = "Category 5 Hurricane"
-  } else {
-    stormPower = "invalid"
-  }
+    stormPower = "Category 5 Hurricane."
+}
 
-  var div = document.getElementById("hurricane")
-  div.innerHTML = "The storm is a " + stormPower + "."
+  var p = document.getElementById("hurricane-output")
+  windspeed = Number(windspeed);
+  p.innerHTML = stormPower;
 
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
@@ -240,6 +242,16 @@ function gymnastics() {
   let total = 0; //// DO NOT MODIFY
   let scores = []; // DO NOT MODIFY
   /////////////////// DO NOT MODIFY
+
+  let score1 = prompt("Enter the first score.")
+  let score2 = prompt("Enter the first score.")
+  let score3 = prompt("Enter the first score.")
+  let score4 = prompt("Enter the first score.")
+  let score5 = prompt("Enter the first score.")
+  let score6 = prompt("Enter the first score.")
+
+  var div = document.getElementById("")
+  div.innerHTML =
 
   /*
    * NOTE: The 'total' variable should be representative of the sum of all
