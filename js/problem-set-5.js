@@ -25,9 +25,29 @@ function mario() {
   ////////////// DO NOT MODIFY
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
+let hashtag = '#';
+let space = '&nbsp';
+let lineS = '';
+while(true) {
+  height = Number(prompt("Please enter a number between 1 and 23."))
+  if (height >= 1 && height <= 23 && Number.isInteger(height)) {
+    for (let i = 0; i < height; i++) {
 
-  height = prompt("Please choose a height between 1 and 23.")
+    for (let j = 0; j <= (height-2-i); j++) {
+      lineS = lineS + space;
+    }
 
+    for (let k = 0; k <= (1+i); k++) {
+      lineS = lineS + hashtag;
+    }
+
+    lineS = lineS + "<br>"
+    }
+    let div1 = document.getElementById("mario-easy-output")
+    div1.innerHTML = "<code>" + lineS + "</code>";
+    break;
+  }
+}
 
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
@@ -154,7 +174,15 @@ function credit() {
 
 function guess() {
 
-  Math.
+  let number = Math.floor((Math.random() * 1000) + 1).toFixed(0);
+  let correct = prompt("Guess a number between 1 and 1000.")
+  let guesses = 0;
+  while (number != correct) {
+    if (correct > number) {
+      prompt("Guess higher!")
+      counter++;
+    }
+  }
 
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
@@ -328,6 +356,8 @@ function reportCard() {
   let quizzes = 0; //// DO NOT MODIFY
   let homeworks = 0; // DO NOT MODIFY
   ///////////////////// DO NOT MODIFY
+
+  
 
   /*
    * NOTE: The 'tests', 'quizzes', and 'homeworks' variables should be
