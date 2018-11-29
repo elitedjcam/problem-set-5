@@ -258,8 +258,6 @@ function gymnastics() {
   score5 = Number(score5);
   score6 = Number(score6);
 
-
-
   scores = [score1, score2, score3, score4, score5, score6]
   scores.sort(function(a, b){return a - b});
 
@@ -267,9 +265,10 @@ function gymnastics() {
   console.log(scores)
   average = (total / 4)
   average.toFixed(2);
+  avgScore = average.toFixed(2)
 
   var div = document.getElementById("gymnastics-output")
-  div.innerHTML = "Discarded: " + scores[0] + ", " + scores[5] + "<br/> Score: " + average
+  div.innerHTML = "Discarded: " + scores[0] + ", " + scores[5] + "<br/>" + "Score: " + avgScore
 
   /*
    * NOTE: The 'total' variable should be representative of the sum of all
