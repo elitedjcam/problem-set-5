@@ -82,7 +82,30 @@ function marioAgain() {
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 2 CODE HERE
+  while (true){
+    height=prompt("Please enter a valid height");
+    height=Number(height);
+    if(height>=1 && height<=23 && Number.isInteger(height)){
+      break;
+    };
+  };
+  let i = 1;
+  let hash ='#';
+  let lines ="<code>";
+  let spaceS =height-2;
+  let split='&nbsp'+'&nbsp';
+  while (i<=height){
+    let a='';
+    for(let j=0; j<=spaceS; j++) {
+      a+='&nbsp;';
+    }
+    spaceS--;
+    hash = hash + '#';
+    lines = lines + a + hash + split + hash + "</br>";
+    i++;
+  }
+  document.getElementById("mario-hard-output").innerHTML=lines;
+  lines=lines+"</code>"
 
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
@@ -180,7 +203,9 @@ function guess() {
   while (number != correct) {
     if (correct > number) {
       prompt("Guess higher!")
-      counter++;
+      guesses++;
+    } else if (correct < number) {
+      prompt("Guess lower!")
     }
   }
 
@@ -357,7 +382,7 @@ function reportCard() {
   let homeworks = 0; // DO NOT MODIFY
   ///////////////////// DO NOT MODIFY
 
-  
+
 
   /*
    * NOTE: The 'tests', 'quizzes', and 'homeworks' variables should be
